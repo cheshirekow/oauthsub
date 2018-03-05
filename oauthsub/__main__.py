@@ -1,4 +1,9 @@
 from oauthsub import auth_service
 
-if __name__ == '__main__':
+
+def main():
   auth_service.main()
+
+
+if __name__ == '__main__':
+  main()

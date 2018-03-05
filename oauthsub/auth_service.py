@@ -27,7 +27,7 @@ import oauth2client.client
 import requests
 import oauthsub
 
-VERSION = '0.1.0'
+VERSION = '0.1.2'
 
 
 class ZipfileLoader(jinja2.BaseLoader):
@@ -432,7 +432,7 @@ def main():
                       help='use a configuration file')
 
   config_dict = Configuration().serialize()
-  for key in config_dict.get_fields():
+  for key in Configuration.get_fields():
     value = config_dict[key]
     helptext = VARDOCS.get(key, None)
     # NOTE(josh): argparse store_true isn't what we want here because we want

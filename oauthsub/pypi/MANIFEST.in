@@ -1,0 +1,5 @@
+prune doc/
+prune oauthsub/pypi
+prune oauthsub/example
+prune oauthsub/doc
+include oauthsub/templates/*.tpl

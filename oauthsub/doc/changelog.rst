@@ -15,3 +15,16 @@ Initial public commit
 * Includes example nginx and oauthsub configuration files
 * Module directory can be zipped into an executable zipfile and distributed
   as a single file.
+
+v0.1.1
+------
+
+* Fix setup.py description string
+
+v0.1.2
+------
+
+* Fix setup.py pointing to wrong main module, wrong keywords, missing
+  package data
+* Add Manifest.in
+* Fix wrong config variable in main()

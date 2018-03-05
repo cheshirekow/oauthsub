@@ -2,7 +2,7 @@ import io
 from setuptools import setup
 
 GITHUB_URL = 'https://github.com/cheshirekow/oauthsub'
-VERSION = '0.1.0'
+VERSION = '0.1.2'
 
 with io.open('README.rst', encoding='utf8') as infile:
   long_description = infile.read()
@@ -17,15 +17,17 @@ setup(
     author_email='josh.bialkowski@gmail.com',
     url=GITHUB_URL,
     download_url='{}/archive/{}.tar.gz'.format(GITHUB_URL, VERSION),
-    keywords=['cmake', 'format'],
+    keywords=['oauth', 'nginx', 'flask'],
     classifiers=[],
     entry_points={
         'console_scripts': ['oauthsub=oauthsub.__main__:main'],
     },
+    package_data={'oauthsub' : ['templates/*.tpl']},
+    include_package_data=True,
     install_requires=[
-      'Flask',
-      'jinja2',
-      'oauth2client',
-      'requests',
+        'Flask',
+        'jinja2',
+        'oauth2client',
+        'requests',
     ]
 )
