@@ -21,6 +21,9 @@
 # sys.path.insert(0, os.path.abspath('.'))
 
 import os
+from recommonmark.parser import CommonMarkParser
+from recommonmark.transform import AutoStructify
+
 filepath = os.path.realpath(__file__)
 if os.path.islink(filepath):
   dirname = os.path.dirname(filepath)
@@ -31,7 +34,7 @@ else:
 # General information about the project.
 docname = project + u'doc'
 title = project + ' Documentation'
-copyright = u'2018, Josh Bialkowski'
+copyright = u'2018-2019, Josh Bialkowski'  # pylint: disable=W0622
 author = u'Josh Bialkowski'
 
 # -- General configuration ------------------------------------------------
@@ -57,7 +60,10 @@ templates_path = []
 # You can specify multiple suffix as a list of string:
 #
 # source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_parsers = {
+    '.md': CommonMarkParser,
+}
+source_suffix = ['.rst', '.md']
 
 # The master toctree document.
 master_doc = 'index'
@@ -180,3 +186,14 @@ texinfo_documents = [
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'https://docs.python.org/': None}
+
+# Advanced markdown
+def setup(app):
+  app.add_config_value('recommonmark_config', {
+      'auto_code_block': True,
+      # 'url_resolver': lambda url: github_doc_root + url,
+      'auto_toc_tree_section': 'Contents',
+      'enable_auto_toc_tree': True,
+      'enable_eval_rst': True,
+  }, True)
+  app.add_transform(AutoStructify)

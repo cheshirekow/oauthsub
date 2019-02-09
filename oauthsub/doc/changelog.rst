@@ -2,6 +2,30 @@
 Changelog
 =========
 
+
+v0.1.3
+------
+
+* python3 compatability
+* add bypass option for debugging in a local environment
+* cleanup package organization a bit
+* add github provider support
+* allow custom jinja template
+* use gevent or twisted for production mode
+
+v0.1.2
+------
+
+* Fix setup.py pointing to wrong main module, wrong keywords, missing
+  package data
+* Add Manifest.in
+* Fix wrong config variable in main()
+
+v0.1.1
+------
+
+* Fix setup.py description string
+
 ------
 v0.1.0
 ------
@@ -15,16 +39,3 @@ Initial public commit
 * Includes example nginx and oauthsub configuration files
 * Module directory can be zipped into an executable zipfile and distributed
   as a single file.
-
-v0.1.1
-------
-
-* Fix setup.py description string
-
-v0.1.2
-------
-
-* Fix setup.py pointing to wrong main module, wrong keywords, missing
-  package data
-* Add Manifest.in
-* Fix wrong config variable in main()

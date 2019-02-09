@@ -2,7 +2,14 @@ import io
 from setuptools import setup
 
 GITHUB_URL = 'https://github.com/cheshirekow/oauthsub'
-VERSION = '0.1.2'
+VERSION = None
+
+with io.open("oauthsub/__init__.py") as infile:
+  for line in infile:
+    if line.strip().startswith("VERSION ="):
+      VERSION = line.split("=", 1)[1].strip().strip('"')
+
+assert VERSION is not None
 
 with io.open('README.rst', encoding='utf8') as infile:
   long_description = infile.read()
@@ -25,7 +32,7 @@ setup(
     package_data={'oauthsub' : ['templates/*.tpl']},
     include_package_data=True,
     install_requires=[
-        'Flask',
+        'flask',
         'jinja2',
         'oauth2client',
         'requests',
