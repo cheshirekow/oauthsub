@@ -34,7 +34,6 @@ setup(
     install_requires=[
         'flask',
         'jinja2',
-        'oauth2client',
-        'requests',
+        'requests_oauthlib',
     ]
 )

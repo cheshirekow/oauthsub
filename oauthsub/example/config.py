@@ -5,9 +5,6 @@ Example configuration
 # The root URL for browser redirects
 rooturl = 'http://localhost:8081'
 
-# The location of client_secrets.json, or the raw JSON dictionary itself
-secrets = '/tmp/client_secrets.json'
-
 # Enable flask debugging for testing.
 flask_debug = True
 
@@ -57,38 +54,17 @@ client_secrets = {
   "google": {
     "client_id": ("000000000000-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
                   ".apps.googleusercontent.com"),
-    "project_id": "example-project",
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "authorize_uri": "https://accounts.google.com/o/oauth2/auth",
     "token_uri": "https://oauth2.googleapis.com/token",
-    "auth_provider_x509_cert_url":
-      "https://www.googleapis.com/oauth2/v1/certs",
     "client_secret": "xxxxxxxxxx-xxxxxxxxxxxxx",
-    "redirect_uris": [
-      "http://lvh.me:8080/auth/callback?provider=google",
-      "http://lvh.me:8081/auth/callback?provider=google",
-      "https://lvh.me:8443/auth/callback?provider=google"
-    ],
-    "javascript_origins": [
-      "http://lvh.me:8080",
-      "http://lvh.me:8081",
-      "https://lvh.me:8443"
-    ]
+    "redirect_uri": "http://lvh.me:8080/auth/callback?provider=google",
   },
   "github": {
     "client_id": "xxxxxxxxxxxxxxxxxxxx",
-    "auth_uri": "https://github.com/login/oauth/authorize",
+    "authorize_uri": "https://github.com/login/oauth/authorize",
     "token_uri": "https://github.com/login/oauth/access_token",
     "client_secret": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    "redirect_uris": [
-      "http://lvh.me:8080/auth/callback",
-      "http://lvh.me:8081/auth/callback",
-      "https://lvh.me:8443/auth/callback"
-    ],
-    "javascript_origins": [
-      "http://lvh.me:8080",
-      "http://lvh.me:8081",
-      "https://lvh.me:8443"
-    ]
+    "redirect_uris": "http://lvh.me:8080/auth/callback"
   }
 }
 

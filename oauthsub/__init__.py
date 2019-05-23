@@ -5,4 +5,4 @@ this service should be proxied through nginx.
 See: https://developers.google.com/api-client-library/python/auth/web-app
 """
 
-VERSION = "0.1.3"
+VERSION = "0.2.0"

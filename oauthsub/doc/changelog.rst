@@ -2,6 +2,20 @@
 Changelog
 =========
 
+-----------
+v0.2 series
+-----------
+
+v0.2.0
+------
+
+* ported to from oauth2client (deprecated) to oauthlib
+* slight refactoring into utils/appliation
+* refactored application logic into a more flask-familiar layout
+
+-----------
+v0.1 series
+-----------
 
 v0.1.3
 ------
@@ -26,7 +40,6 @@ v0.1.1
 
 * Fix setup.py description string
 
-------
 v0.1.0
 ------
 
