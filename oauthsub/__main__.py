@@ -47,7 +47,9 @@ def dump_config(config, outfile):
         outfile.write('# ' + line + '\n')
     value = getattr(config, key)
     if isinstance(value, dict):
-      outfile.write('{} = {}\n\n'.format(key, json.dumps(value, indent=2)))
+      outfile.write(
+          '{} = {}\n\n'.format(
+              key, json.dumps(value, indent=2, sort_keys=True)))
     else:
       outfile.write('{} = {}\n\n'.format(key, ppr.pformat(value)))
 

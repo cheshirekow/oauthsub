@@ -1,42 +1,6 @@
-========
-oauthsub
-========
-
-.. image:: https://travis-ci.com/cheshirekow/oauthsub.svg?branch=master
-    :target: https://travis-ci.com/cheshirekow/oauthsub
-
-.. image:: https://readthedocs.org/projects/oauthsub/badge/
-    :target: https://oauthsub.rtfd.io
-
-Simple oauth2 subrequest handler for reverse proxies
-
--------
-Purpose
--------
-
-The goal of ``oauthsub`` is to enable simple and secure Single Sign On by
-deferring authentication to an ``oauth2`` provider (like google, github,
-microsoft, etc).
-
-See the examples in `the documentation`__ for ideas on how best to use it.
-
-.. __: https://oauthsub.rtfd.io
-
-------------
-Installation
-------------
-
-Install through pip::
-
-  pip install oauthsub
-
-or see `the documentation`__ for more options.
-
-.. __: https://oauthsub.rtfd.io
-
------
+=====
 Usage
------
+=====
 
 .. dynamic: usage-begin
 
@@ -196,21 +160,3 @@ Which outputs something like::
       return None
 
 .. dynamic: config-end
-
-
--------------------
-Testing the service
--------------------
-
-Test the service directly on localhost, put your client secrets in a
-configuration file and (assuming you've enabled
-``http://lvh.me:8081/auth/callback`` as an authorized redirect on google)
-run with::
-
-    oauthsub --flask-debug \
-             --config /path/to/your/config.py
-
-And then navigate to ``http://localhost:8081/auth`` from your browser.
-
-See the documentation for more detailed testing instructions including how
-to test with NGINX.
