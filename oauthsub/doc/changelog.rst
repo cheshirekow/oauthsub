@@ -6,6 +6,14 @@ Changelog
 v0.2 series
 -----------
 
+v0.2.1
+------
+
+* Almost no code changes other than minor formatting
+* Added a bunch of new documentation including how to register an app with
+  many common providers, and how to configure many common services to work
+  behind oauthsub.
+
 v0.2.0
 ------
 

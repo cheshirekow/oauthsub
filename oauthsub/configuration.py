@@ -44,8 +44,8 @@ class Configuration(object):
                **kwargs):
     self.rooturl = get_default(rooturl, 'http://localhost')
     self.flask_debug = flask_debug
-    self.flask_privkey = get_default(flask_privkey,
-                                     base64.b64encode(os.urandom(24)))
+    random_key = base64.b64encode(os.urandom(24)).decode("utf-8")
+    self.flask_privkey = get_default(flask_privkey, random_key)
     self.response_header = response_header
     self.allowed_domains = get_default(allowed_domains, ['gmail.com'])
     self.host = get_default(host, '0.0.0.0')
@@ -127,5 +127,8 @@ VARDOCS = {
         "If true, enables the /forbidden endpoint, to which you can redirect"
         " 401 errors from your reverse proxy. This page is a simple message "
         " with active template but includes login links that will redirect back"
-        " to the forbidden page after a successful auth.")
+        " to the forbidden page after a successful auth."),
+    "server": (
+        "Which WGSI server to use (flask, gevent, twisted)"
+    )
 }

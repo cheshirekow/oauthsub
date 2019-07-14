@@ -13,3 +13,13 @@ Module contents
     :members:
     :undoc-members:
     :show-inheritance:
+
+.. automodule:: oauthsub.configuration
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+.. automodule:: oauthsub.util
+    :members:
+    :undoc-members:
+    :show-inheritance:
