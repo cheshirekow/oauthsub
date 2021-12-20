@@ -127,5 +127,8 @@ VARDOCS = {
         "If true, enables the /forbidden endpoint, to which you can redirect"
         " 401 errors from your reverse proxy. This page is a simple message "
         " with active template but includes login links that will redirect back"
-        " to the forbidden page after a successful auth.")
+        " to the forbidden page after a successful auth."),
+    "server": (
+        "Which WGSI server to use (flask, gevent, twisted)"
+    )
 }

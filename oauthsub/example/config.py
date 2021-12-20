@@ -27,14 +27,14 @@ host = '0.0.0.0'
 port = 8081
 
 # Directory where we store resource files
-logdir = '/tmp/auth_service/logs'
+logdir = '/tmp/oauthsub/logs'
 
 # Flask configuration options
 # -Each session data is stored inside a file located in the specified directory
 # -The cookie expires after 10 days
 flaskopt = {
     'SESSION_TYPE': 'filesystem',
-    'SESSION_FILE_DIR': '/tmp/auth_services/session_data',
+    'SESSION_FILE_DIR': '/tmp/oauthsubs/session_data',
     'PERMANENT_SESSION_LIFETIME': 864000
 }
 
