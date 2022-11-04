@@ -6,4 +6,4 @@ jinja2==2.10.1
 pylint==1.9.1
 requests==2.21.0
 requests-oauthlib==1.2.0
-twisted==19.2.1
+twisted==22.10.0
